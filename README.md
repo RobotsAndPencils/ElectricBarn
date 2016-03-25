@@ -61,6 +61,8 @@ First give `pyenv` a fresh install of Python2.7 to use
 
 `$ pyenv install 2.7.10`
 
+_Note: may need to use `PYTHON_CONFIGURE_OPTS="--enable-unicode=ucs2" pyenv install 2.7.10`_
+
 Then let's create a virtualenv from this version of python
 
 `$ pyenv virtualenv 2.7.10 mitmproxy-env-2.7.10`
