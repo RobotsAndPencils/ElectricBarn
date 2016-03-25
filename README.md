@@ -81,10 +81,6 @@ Now we should be able to install mitmproxy (v0.16 is currently the latest versio
 
 `$ env LDFLAGS="-L$(brew --prefix openssl)/lib" CFLAGS="-I$(brew --prefix openssl)/include" pip install git+https://github.com/mitmproxy/mitmproxy.git`
 
-and then
-
-`$ env LDFLAGS="-L$(brew --prefix openssl)/lib" CFLAGS="-I$(brew --prefix openssl)/include" pip install git+https://github.com/mitmproxy/netlib.git@v0.16`
-
 you should now be able to run `./electricbarn.py` from the `mitm` directory. 
 
 Any file in the subfolders will be stubbed for a matching request.
