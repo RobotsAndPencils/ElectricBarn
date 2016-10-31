@@ -57,17 +57,17 @@ Then start using your updated profile:
 ## Create mitm-specific environment
 `pyenv` and `pyenv-virtualenv` make it easy to have a project-specific python install. This helps keep your machine clean from conflicting dependencies, etc.
 
-First give `pyenv` a fresh install of Python2.7 to use
+First give `pyenv` a fresh install of Python3.5 to use
 
-`$ pyenv install 2.7.10`
+`$ pyenv install 3.5.1`
 
 _Note: may need to use `PYTHON_CONFIGURE_OPTS="--enable-unicode=ucs2" pyenv install 2.7.10`_
 
 Then let's create a virtualenv from this version of python
 
-`$ pyenv virtualenv 2.7.10 mitmproxy-env-2.7.10`
+`$ pyenv virtualenv 3.5.1 mitmproxy-env-3.5.1`
 
-This created a `mitmproxy-env-2.7.10` with the 2.7.10 version of python that we'll use with the `mitmproxy` libraries.
+This created a `mitmproxy-env-3.5.1` with the 3.5.1 version of python that we'll use with the `mitmproxy` libraries.
 
 We want to activate our environment, but first let's get the name of the virtualenv we want to activate
 
@@ -75,11 +75,11 @@ We want to activate our environment, but first let's get the name of the virtual
 
 which lets us see that we can use
 
-`$ pyenv activate mitmproxy-env-2.7.10`
+`$ pyenv activate mitmproxy-env-3.5.1`
 
-Now we should be able to install mitmproxy (v0.16 is currently the latest version)
+Now we should be able to install mitmproxy (v0.18.2 is currently the latest version)
 
-`$ env LDFLAGS="-L$(brew --prefix openssl)/lib" CFLAGS="-I$(brew --prefix openssl)/include" pip install git+https://github.com/mitmproxy/mitmproxy.git`
+`$ pip install mitmproxy`
 
 you should now be able to run `./electricbarn.py` from the `mitm` directory. 
 
