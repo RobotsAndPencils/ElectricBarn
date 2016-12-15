@@ -17,8 +17,8 @@ ElectricBarn depends on MITMProxy, and the MITMProxy Python libraries. Because o
 Now that we have mitmproxy we can put the (host-specific) mitmproxy certificate on your target device.
 
 1. Make note of your Mac's local IP address (e.g. 192.168.1.12)
-2. launch mitmproxy, telling it to listen on port 8888 `mitmproxy -p 8888`
-3. Configure your iOS device's WiFi to use your Mac's IP as a *Manual* proxy, and set the port to 8888
+2. launch mitmproxy, telling it to listen on port 8080 `mitmproxy -p 8080`
+3. Configure your iOS device's WiFi to use your Mac's IP as a *Manual* proxy, and set the port to 8080
 4. Go to `mitm.it` in MobileSafari and install the "Apple" certificate on your iOS device.
 5. Press `q` and then `y` to exit mitmproxy (Before quitting you can also load other pages and confirm that mitmproxy is indicating that it is intercepting the requests/responses)
 
